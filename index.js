@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -30,62 +32,101 @@ return (
 
 <div className="p-5 text-white z-10 text-5xl font-bold w-[35rem] font-sans ml-[0rem] mt-[-30rem]">
        <Link href="/page2"><div>Performance-Potential Profile</div></Link>
+
+
 </div>
 
-<div className="w-[400px] ml-[25rem] mt-[-25rem] z-20">
+<button onClick={handleSubmit(onSubmit)} className="p-5 text-black font-bold bg-gray-300 z-10 w-[15rem] font-sans ml-[-32rem] mt-[0rem]">Submit Profile</button>
 
-<form onSubmit={handleSubmit(onSubmit)} className="space-y-2 mt-[25rem]">
-<div>
-<label className="p-2 text-white ml-[-0.5rem]">Q1: What activities did you find easy as a child</label>
-<input type="text" name="name" className="w-[400px]" {...register("name")}/>
-</div>
 
-<div>
-<label className="p-2 text-white ml-[-0.5rem]">Q2: What activities did you love doing when you were younger</label>
-<input type="text" name="name" className="w-[400px]" {...register("name")}/>
+<div className="w-[400px] ml-[35rem] mt-[-25rem] z-20">
+
+<div className="mt-[25rem]">
+<form className="space-y-2">
+       <div>
+<label className="p-2 text-white ml-[-0.5rem]">Q1: Did you find specific activities easy as a child</label>
+<select className="w-[400px]" {...register("Q1")}>
+       <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+       </div>
+
+
+       <div>
+<label className="p-2 text-white ml-[-0.5rem]">Q2: Did you love doing these activities when you were younger</label>
+<select className="w-[400px]" {...register("Q2")}>
+       <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
 </div>
 
 <div>
 <label className="p-2 text-white ml-[-0.5rem]">Q3: Did you experience traumatic events as a child-teen</label>
-<input type="text" name="name" className="w-[400px]" {...register("name")}/>
+<select className="w-[400px]" {...register("Q3")}>
+       <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
 </div>
 
 <div>
 <label className="p-2 text-white ml-[-0.5rem]">Q4: Would you say you are obsessive about one thing</label>
-<input type="text" name="name" className="w-[400px]" {...register("name")}/>
+<select className="w-[400px]" {...register("Q4")}>
+       <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
 </div>
 
 <div>
-<label className="p-2 text-white ml-[-0.5rem]">Q5: What things did you practice over and over again during your teens-20's</label>
-<input type="text" name="name" className="w-[400px]" {...register("name")}/>
+<label className="p-2 text-white ml-[-0.5rem]">Q5: Did you practice over and over again during your teens-20's</label>
+<select className="w-[400px]" {...register("Q5")}>
+       <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
 </div>
 
 <div>
 <label className="p-2 text-white ml-[-0.5rem]">Q6: Did you deliberately move home to pursue your talents as a teen-20's</label>
-<input type="text" name="name" className="w-[400px]" {...register("name")}/>
+<select className="w-[400px]" {...register("Q6")}>
+       <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
 </div>
 
 <div>
 <label className="p-2 text-white ml-[-0.5rem]">Q7: Have you often lived/worked in a team atmosphere</label>
-<input type="text" name="name" className="w-[400px]" {...register("name")}/>
+<select className="w-[400px]" {...register("Q7")}>
+       <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
 </div>
 
 <div>
 <label className="p-2 text-white ml-[-0.5rem]">Q8: Do people think you are an independent thinker that doesnt quite fit in</label>
-<input type="text" name="name" className="w-[400px]" {...register("name")}/>
+<select className="w-[400px]" {...register("Q8")}>
+       <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
 </div>
 
 <div>
 <label className="p-2 text-white ml-[-0.5rem]">Q9: Are you trying to change the world</label>
-<input type="text" name="name" className="w-[400px]" {...register("name")}/>
+<select className="w-[400px]" {...register("Q9")}>
+       <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
 </div>
 
 <div>
 <label className="p-2 text-white ml-[-0.5rem]">Q10: Are you a tinkerer/carefully looking at how things work and why</label>
-<input type="text" name="name" className="w-[400px]" {...register("name")}/>
+<select className="w-[400px]" {...register("Q10")}>
+       <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
 </div>
 
 </form>  
+
+</div>
 
 
 
@@ -100,3 +141,4 @@ return (
 
 
 }
+
